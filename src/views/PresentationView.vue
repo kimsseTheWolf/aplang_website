@@ -1,18 +1,11 @@
 <script setup>
-import LeftArrow from '@/components/icons/LeftArrow.vue';
-import RoundButton from '@/components/RoundButton.vue'
+import NavigationBar from '@/components/NavigationBar.vue';
+import { ref } from 'vue';
+
+const cp = ref(0);
 </script>
 <template>
-    <RoundButton>
-        <template #icon>
-            <img src="@/components/icons/left-btn.svg"/>
-        </template>
-    </RoundButton>
-    <RoundButton>
-        <template #icon>
-            <img src="@/components/icons/right-btn.svg"/>
-        </template>
-    </RoundButton>
+    <NavigationBar :length="10" v-model:currentPage="cp"/>
 </template>
 <style scoped>
 </style>
