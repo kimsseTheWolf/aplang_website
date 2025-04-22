@@ -5,7 +5,12 @@ import RoundButton from '@/components/RoundButton.vue'
 <template>
     <RoundButton>
         <template #icon>
-            <LeftArrow />
+            <img src="@/components/icons/left-btn.svg"/>
+        </template>
+    </RoundButton>
+    <RoundButton>
+        <template #icon>
+            <img src="@/components/icons/right-btn.svg"/>
         </template>
     </RoundButton>
 </template>
