@@ -1,4 +1,5 @@
 <script setup>
+import PositionDot from './PositionDot.vue';
 import RoundButton from './RoundButton.vue';
 
 const props = defineProps({
@@ -31,14 +32,14 @@ function handlePrevPage() {
 }
 </script>
 <template>
-    <div class="nav-bar-container">
-        <RoundButton @click="handlePrevPage">
+    <div class="nav-bar-container nav-bar-position">
+        <RoundButton @click="handlePrevPage" style="margin-right: 10px;">
             <template #icon>
                 <img src="@/components/icons/left-btn.svg" />
             </template>
         </RoundButton>
-        <div>{{ currModel }} out of {{ length }}</div>
-        <RoundButton @click="handleNextPage">
+        <PositionDot v-for="index in props.length" :key="index" :index="index - 1" :currentPage="currentPage"/>
+        <RoundButton @click="handleNextPage" style="margin-left: 10px;">
             <template #icon>
                 <img src="@/components/icons/right-btn.svg" />
             </template>
@@ -59,5 +60,17 @@ function handlePrevPage() {
     color: white;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    transition: background-color 0.1s ease;
+}
+
+.nav-bar-container:hover {
+    background-color: rgba(65, 65, 65, 0.95);
+}
+
+.nav-bar-position {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 </style>
