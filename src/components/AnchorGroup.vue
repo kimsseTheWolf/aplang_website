@@ -1,5 +1,8 @@
 <script setup>
 
+import { animate } from "animejs";
+import { onMounted } from "vue";
+
 let timer = null;
 
 function increaseTransparent() {
@@ -35,6 +38,10 @@ function stopTimer() {
     clearTimeout(timer);
     decreaseTransparent();
 }
+
+onMounted(() => {
+    startTimer();
+})
 </script>
 <template>
     <div class="anchor-group-container" id="a-group" @mouseenter="stopTimer" @mouseleave="startTimer">

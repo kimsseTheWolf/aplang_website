@@ -3,6 +3,7 @@ import PositionDot from './PositionDot.vue';
 import RoundButton from './RoundButton.vue';
 
 import { animate } from 'animejs';
+import { onMounted } from 'vue';
 
 const props = defineProps({
     length: {
@@ -68,6 +69,10 @@ function stopTimer() {
     clearTimeout(timer);
     decreaseTransparent();
 }
+
+onMounted(() => {
+    startTimer();
+})
 </script>
 <template>
     <div class="nav-bar-container nav-bar-position" id="nav-bar"
