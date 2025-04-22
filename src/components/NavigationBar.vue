@@ -38,8 +38,8 @@ function handlePrevPage() {
 function increaseTransparent() {
     animate('#nav-bar', {
         opacity: {
-            value: 0,
-            duration: 1000,
+            to: 0,
+            duration: 100,
             easing: 'easeInOutQuad',
         },
     });
@@ -48,8 +48,8 @@ function increaseTransparent() {
 function decreaseTransparent() {
     animate('#nav-bar', {
         opacity: {
-            value: 1,
-            duration: 1000,
+            to: 1,
+            duration: 100,
             easing: 'easeInOutQuad',
         },
     });
@@ -100,10 +100,11 @@ function stopTimer() {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
+    user-select: none;
 }
 
 .nav-bar-container:hover {
-    background-color: rgba(65, 65, 65, 0.95);
+    background-color: rgba(65, 65, 65, 0.85);
 }
 
 .nav-bar-position {
