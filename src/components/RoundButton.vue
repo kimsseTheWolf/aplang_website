@@ -50,6 +50,7 @@ function handleMouseUp() {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     cursor: pointer;
+    backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
 }
 
