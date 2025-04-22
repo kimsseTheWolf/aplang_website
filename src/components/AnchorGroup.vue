@@ -58,5 +58,8 @@ onMounted(() => {
     height: fit-content;
     background-color: rgba(0, 0, 0, 0);
     color: white;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 </style>
