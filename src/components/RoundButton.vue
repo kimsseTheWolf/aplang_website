@@ -1,29 +1,31 @@
 <script setup>
-import anime from "animejs"
+import { animate } from "animejs";
 import { onMounted, ref } from "vue";
 
 const componentID = ref("")
 
 onMounted(() => {
     // generate a random uuid for this component
-    componentID.value = crypto.randomUUID()
+    componentID.value = `component-${crypto.randomUUID()}`
 })
 
 function handleMouseDown() {
-    anime({
-        targets: componentID.value,
-        scale: 0.9,
-        duration: 150,
-        easing: 'easeOutQuad',
+    animate(`#${componentID.value}`, {
+        scale: {
+            to: 0.9,
+            duration: 150,
+            easing: 'easeOutQuad',
+        },
     });
 }
 
 function handleMouseUp() {
-    anime({
-        targets: componentID.value,
-        scale: 1,
-        duration: 150,
-        easing: 'easeOutQuad',
+    animate(`#${componentID.value}`, {
+        scale: {
+            to: 1,
+            duration: 150,
+            easing: 'easeOutQuad',
+        },
     });
 }
 </script>
@@ -53,8 +55,5 @@ function handleMouseUp() {
 
 .round-btn-container:hover {
     background-color: rgba(255, 255, 255, 0.15);
-    border-style: solid;
-    border-width: 1px;
-    border-color: #adadad;
 }
 </style>
