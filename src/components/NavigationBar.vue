@@ -2,6 +2,8 @@
 import PositionDot from './PositionDot.vue';
 import RoundButton from './RoundButton.vue';
 
+import { animate } from 'animejs';
+
 const props = defineProps({
     length: {
         type: Number,
@@ -17,6 +19,8 @@ const currModel = defineModel("currentPage", {
 
 const emit = defineEmits(['update:currentPage']);
 
+let timer = null;
+
 function handleNextPage() {
     console.log("next", currModel.value < props.length - 1)
     if (currModel.value < props.length - 1) {
@@ -30,9 +34,44 @@ function handlePrevPage() {
         currModel.value--;
     }
 }
+
+function increaseTransparent() {
+    animate('#nav-bar', {
+        opacity: {
+            value: 0,
+            duration: 1000,
+            easing: 'easeInOutQuad',
+        },
+    });
+}
+
+function decreaseTransparent() {
+    animate('#nav-bar', {
+        opacity: {
+            value: 1,
+            duration: 1000,
+            easing: 'easeInOutQuad',
+        },
+    });
+}
+
+function startTimer() {
+    console.log("timer start")
+    timer = setTimeout(() => {
+        console.log("hide emit")
+        increaseTransparent();
+    }, 3000);
+}
+
+function stopTimer() {
+    console.log("timer stop")
+    clearTimeout(timer);
+    decreaseTransparent();
+}
 </script>
 <template>
-    <div class="nav-bar-container nav-bar-position">
+    <div class="nav-bar-container nav-bar-position" id="nav-bar"
+    @mouseenter="stopTimer" @mouseleave="startTimer">
         <RoundButton @click="handlePrevPage" style="margin-right: 10px;">
             <template #icon>
                 <img src="@/components/icons/left-btn.svg" />
