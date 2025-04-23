@@ -36,6 +36,7 @@ function handleMouseUp() {
     @mouseup="handleMouseUp" 
     @mouseleave="handleMouseUp">
         <slot name="icon" />
+        <slot name="text" />
     </div>
 </template>
 <style scoped>

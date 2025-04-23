@@ -81,7 +81,7 @@ function handleOnClose() {
 .main-container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 17px;
     width: v-bind(mainWidth);
     height: v-bind(height);
     border-top-left-radius: v-bind(adjustableCornerRadisu);

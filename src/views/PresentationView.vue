@@ -7,6 +7,7 @@ import MenuItem from '@/components/MenuItem.vue';
 import { onMounted, ref } from 'vue';
 import OverlayBox from '@/components/OverlayBox.vue';
 import Modal from '@/components/Modal.vue';
+import About from '@/components/templates/About.vue';
 
 const cp = ref(0);
 const showMenu = ref(false);
@@ -61,11 +62,9 @@ function handleShowOveralay() {
         </template>
     </Menu>
     <NavigationBar :length="10" v-model:currentPage="cp"/>
-    <Modal v-model:show="showOverlay" :show-sidebar="true">
+    <Modal v-model:show="showOverlay" :show-sidebar="false">
         <template #content>
-            <p>This is a sample presentation application.</p>
-            <p>Click the button below to close this modal.</p>
-            <RoundButton @click="showOverlay = false">Close</RoundButton>
+            <About />
         </template>
     </Modal>
 </template>
