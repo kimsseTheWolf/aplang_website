@@ -57,5 +57,6 @@ watch(() => props.show, (newVal) => {
     color: white;
     backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
+    opacity: 0;
 }
 </style>

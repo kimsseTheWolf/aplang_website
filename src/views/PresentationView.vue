@@ -4,10 +4,15 @@ import NavigationBar from '@/components/NavigationBar.vue';
 import RoundButton from '@/components/RoundButton.vue';
 import Menu from '@/components/Menu.vue';
 import MenuItem from '@/components/MenuItem.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const cp = ref(0);
-const showMenu = ref(true);
+const showMenu = ref(false);
+
+onMounted(() => {
+    // Initialize any necessary data or state here
+    showMenu.value = false;
+});
 </script>
 <template>
     <AnchorGroup>
@@ -38,6 +43,12 @@ const showMenu = ref(true);
                     <img src="@/components/icons/info.svg" height="20px" />
                 </template>
                 <template #text>About</template>
+            </MenuItem>
+            <MenuItem @onClick="showMenu = false">
+                <template #icon>
+                    <img src="@/components/icons/close.svg" height="20px" />
+                </template>
+                <template #text>Close</template>
             </MenuItem>
         </template>
     </Menu>
