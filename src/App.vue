@@ -1,10 +1,11 @@
-<script setup>
-import { RouterView } from 'vue-router'
-</script>
-
 <template>
-  <RouterView />
+  <router-view />
 </template>
 
-<style scoped>
+<script setup>
+// No additional logic needed for App.vue as it serves as the entry point for routing.
+</script>
+
+<style>
+/* Add global styles if necessary */
 </style>

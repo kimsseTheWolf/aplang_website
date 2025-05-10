@@ -48,14 +48,14 @@ function handleMouseUp() {
     width: 50px;
     height: 50px;
     border-radius: 50px;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
+    background-color: rgba(18, 18, 18, 0.8); /* Dark theme background */
+    color: #ffffff; /* Light text for contrast */
     cursor: pointer;
     backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
 }
 
 .round-btn-container:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(50, 50, 50, 0.8);
 }
 </style>

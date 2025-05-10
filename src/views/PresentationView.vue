@@ -8,10 +8,17 @@ import { onMounted, ref } from 'vue';
 import OverlayBox from '@/components/OverlayBox.vue';
 import Modal from '@/components/Modal.vue';
 import About from '@/components/templates/About.vue';
+import Slide1 from '@/components/templates/Slide1.vue';
+import Slide2 from '@/components/templates/Slide2.vue';
+import Slide3 from '@/components/templates/Slide3.vue';
+import Slide4 from '@/components/templates/Slide4.vue';
+import { useRouter } from 'vue-router';
 
 const cp = ref(0);
 const showMenu = ref(false);
 const showOverlay = ref(false);
+const slides = [Slide1, Slide2, Slide3, Slide4];
+const router = useRouter();
 
 onMounted(() => {
     // Initialize any necessary data or state here
@@ -21,6 +28,20 @@ onMounted(() => {
 function handleShowOveralay() {
     showOverlay.value = true;
     console.log("showOverlay", showOverlay.value)
+}
+
+function handleNextPage() {
+    if (cp.value < slides.length - 1) {
+        cp.value++;
+        router.push(`/slide${cp.value + 1}`);
+    }
+}
+
+function handlePrevPage() {
+    if (cp.value > 0) {
+        cp.value--;
+        router.push(`/slide${cp.value + 1}`);
+    }
 }
 </script>
 <template>
@@ -61,7 +82,10 @@ function handleShowOveralay() {
             </MenuItem>
         </template>
     </Menu>
-    <NavigationBar :length="10" v-model:currentPage="cp"/>
+    <NavigationBar :length="slides.length" v-model:currentPage="cp" @next="handleNextPage" @prev="handlePrevPage"/>
+    <div v-if="slides[cp]" class="slide-wrapper">
+        <component :is="slides[cp]" />
+    </div>
     <Modal v-model:show="showOverlay" :show-sidebar="false">
         <template #content>
             <About />
@@ -69,4 +93,9 @@ function handleShowOveralay() {
     </Modal>
 </template>
 <style scoped>
+.slide-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 </style>

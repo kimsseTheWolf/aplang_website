@@ -100,8 +100,8 @@ onMounted(() => {
     height: fit-content;
     padding: 7px;
     border-radius: 50px;
-    background-color: rgba(50, 50, 50, 0.85);
-    color: white;
+    background-color: rgba(18, 18, 18, 0.85); /* Dark theme background */
+    color: #ffffff; /* Light text for contrast */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
@@ -109,7 +109,7 @@ onMounted(() => {
 }
 
 .nav-bar-container:hover {
-    background-color: rgba(65, 65, 65, 0.85);
+    background-color: rgba(50, 50, 50, 0.85);
 }
 
 .nav-bar-position {

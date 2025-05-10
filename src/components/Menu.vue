@@ -53,8 +53,8 @@ watch(() => props.show, (newVal) => {
     height: fit-content;
     padding: 7px;
     border-radius: 10px;
-    background-color: rgba(55, 55, 55, 0.5);
-    color: white;
+    background-color: rgba(18, 18, 18, 0.5); /* Dark theme background */
+    color: #ffffff; /* Light text for contrast */
     backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
     opacity: 0;

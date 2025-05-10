@@ -46,8 +46,8 @@ function handleClick() {
     height: fit-content;
     padding: 7px;
     border-radius: 10px;
-    background-color: rgba(43, 43, 43, 0.5);
-    color: white;
+    background-color: rgba(18, 18, 18, 0.5); /* Dark theme background */
+    color: #ffffff; /* Light text for contrast */
     backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
     cursor: pointer;
@@ -55,6 +55,6 @@ function handleClick() {
 }
 
 .menu-item-container:hover {
-    background-color: rgba(65, 65, 65, 0.85);
+    background-color: rgba(50, 50, 50, 0.5);
 }
 </style>

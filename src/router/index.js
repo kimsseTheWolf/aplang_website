@@ -1,15 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import PresentationView from '@/views/PresentationView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import PresentationView from '@/views/PresentationView.vue';
+
+const routes = [
+  { path: '/', component: PresentationView },
+];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: PresentationView,
-    },
-  ],
-})
+  history: createWebHistory(),
+  routes,
+});
 
-export default router
+export default router;

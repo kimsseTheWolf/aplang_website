@@ -89,8 +89,8 @@ function handleOnClose() {
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     overflow-y: auto;
-    background-color: rgb(55, 55, 55);
-    color: white;
+    background-color: rgba(18, 18, 18, 0.85); /* Dark theme background */
+    color: #ffffff; /* Light text for contrast */
 }
 .sidebar-container {
     display: flex;

@@ -75,8 +75,8 @@ watch(() => props.show, (newVal) => {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, v-bind(transparentcy));
-    color: white;
+    background-color: rgba(18, 18, 18, v-bind(transparentcy)); /* Dark theme background */
+    color: #ffffff; /* Light text for contrast */
     backdrop-filter: blur(10px);
     opacity: 0;
 }
