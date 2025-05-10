@@ -58,5 +58,9 @@ watch(() => props.show, (newVal) => {
     backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
     opacity: 0;
+    z-index: 999; /* Ensures it stays above most elements */
+    position: fixed; /* Changed to fixed to stay in the same position */
+    top: 65px;
+    left: 10px;
 }
 </style>

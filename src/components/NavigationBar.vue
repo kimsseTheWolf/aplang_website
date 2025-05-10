@@ -106,6 +106,7 @@ onMounted(() => {
     -webkit-backdrop-filter: blur(10px);
     transition: background-color 0.1s ease;
     user-select: none;
+    z-index: 1000; /* Ensures it stays on top */
 }
 
 .nav-bar-container:hover {
@@ -113,9 +114,10 @@ onMounted(() => {
 }
 
 .nav-bar-position {
-    position: absolute;
-    bottom: 20px;
+    position: fixed; /* Changed to fixed to stay in the same position */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1000; /* Ensures it stays on top */
 }
 </style>

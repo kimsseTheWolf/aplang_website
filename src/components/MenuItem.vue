@@ -46,9 +46,9 @@ function handleClick() {
     height: fit-content;
     padding: 7px;
     border-radius: 10px;
-    background-color: rgba(43, 43, 43, 0.5);
+    background-color: rgba(255, 255, 255, 0);
     color: white;
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
     transition: background-color 0.1s ease;
     cursor: pointer;
     user-select: none;
@@ -56,5 +56,6 @@ function handleClick() {
 
 .menu-item-container:hover {
     background-color: rgba(65, 65, 65, 0.85);
+    backdrop-filter: blur(10px)
 }
 </style>
