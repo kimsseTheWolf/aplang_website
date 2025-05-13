@@ -17,7 +17,7 @@
             <h3>Students</h3>
           </template>
           <template #sidebar>
-            <img src="/public/student.webp" alt="Student" />
+            <img src="/student.webp" alt="Student" />
           </template>
           <template #expanded-content>
             <p>
@@ -45,7 +45,7 @@
             <h3>Parents</h3>
           </template>
           <template #sidebar>
-            <img src="/public/parents.png" height="300px" alt="Student" />
+            <img src="/parents.png" height="300px" alt="Student" />
           </template>
           <template #expanded-content>
             <p>
@@ -73,7 +73,7 @@
             <h3>Teachers</h3>
           </template>
           <template #sidebar>
-            <img src="/public/teacher.png" height="400px" alt="Student" />
+            <img src="/teacher.png" height="400px" alt="Student" />
           </template>
           <template #expanded-content>
             <p>
@@ -101,7 +101,7 @@
             <h3>School Administrators</h3>
           </template>
           <template #sidebar>
-            <img src="/public/admin.webp" alt="Student" />
+            <img src="/admin.webp" alt="Student" />
           </template>
           <template #expanded-content>
             <p>
