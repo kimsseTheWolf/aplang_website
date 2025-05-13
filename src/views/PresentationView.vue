@@ -4,32 +4,50 @@ import NavigationBar from '@/components/NavigationBar.vue';
 import RoundButton from '@/components/RoundButton.vue';
 import Menu from '@/components/Menu.vue';
 import MenuItem from '@/components/MenuItem.vue';
-import { onMounted, ref } from 'vue';
-import OverlayBox from '@/components/OverlayBox.vue';
+import { onMounted, ref, watch } from 'vue';
 import Modal from '@/components/Modal.vue';
 import About from '@/components/templates/About.vue';
-import ContentBlock from '@/components/ContentBlock.vue';
-import MultiContentBlock from '@/components/MultiContentBlock.vue';
-import PageHeader from '@/components/PageHeader.vue';
-import SlideContainer from '@/components/SlideContainer.vue';
-import CoverBlock from '@/components/CoverBlock.vue';
+import GraphBlock from '@/components/templates/Graphs/GraphBlock.vue';
+import Slide1 from '@/components/templates/Slide1.vue';
+import Slide2 from '@/components/templates/Slide2.vue';
+import Slide3 from '@/components/templates/Slide3.vue';
+import Slide4 from '@/components/templates/Slide4.vue';
+import Slide5 from '@/components/templates/Slide5.vue';
+import { useRouter, useRoute } from 'vue-router';
 
 const cp = ref(0);
 const showMenu = ref(false);
 const showOverlay = ref(false);
 
 const slides = [
-  { id: 1, component: CoverBlock, props: { title: 'Welcome', description: 'This is the first slide.' } },
-  { id: 2, component: ContentBlock, props: {}, slotContent: { content: '<h1>Example Title</h1><p>This is the first paragraph of the content block.</p><p>This is the second paragraph of the content block.</p>' } },
-  { id: 3, component: MultiContentBlock, props: { leftType: 'media', rightType: 'text' }, slotContent: { left: '<img src="@/components/icons/info.svg" alt="Example Image" />', right: '<h2>Right Text Content</h2><p>This is the text content on the right side.</p>' } },
-  { id: 4, component: MultiContentBlock, props: { leftType: 'text', rightType: 'media', rightAlignCenter: true }, slotContent: { left: '<h2>Left Text Content</h2><p>This is the text content on the left side.</p>', right: '<img src="@/components/icons/github-fill.svg" alt="Example Media" />' } },
+  { id: 1, component: Slide1 },
+  { id: 2, component: Slide2 },
+  { id: 3, component: Slide3 },
+  { id: 4, component: Slide4 },
+  { id: 5, component: Slide5 },
 ];
 
 const currentSlide = ref(0);
+const reloadKey = ref(0);
+
+const router = useRouter();
+const route = useRoute();
+
+// Update currentSlide based on the route
+watch(
+  () => route.path,
+  (newPath) => {
+    const match = newPath.match(/\/(\d+)/);
+    if (match) {
+      currentSlide.value = parseInt(match[1], 10);
+    }
+  },
+  { immediate: true }
+);
 
 function goToSlide(index) {
-  if (index >= 0 && index < slides.length) {
-    currentSlide.value = index;
+  if (index >= 1 && index <= slides.length) {
+    router.push(`/${index}`);
   }
 }
 
@@ -42,10 +60,18 @@ function handleShowOveralay() {
     showOverlay.value = true;
     console.log("showOverlay", showOverlay.value)
 }
+
+function resolveComponent(content) {
+  if (content.includes('<GraphBlock />')) {
+    return GraphBlock;
+  }
+  // Add more component resolution logic if needed
+  return null;
+}
 </script>
 <template>
-
-  <AnchorGroup>
+  <div>
+    <AnchorGroup>
         <template #anchor>
             <RoundButton @click="showMenu = !showMenu">
                 <template #icon>
@@ -82,16 +108,10 @@ function handleShowOveralay() {
             </MenuItem>
         </template>
     </Menu>
-    <NavigationBar :length="slides.length" v-model:currentPage="currentSlide" />
+    <NavigationBar :length="slides.length" v-model:currentPage="currentSlide" @update:currentPage="goToSlide" />
     <div class="slides-wrapper">
         <transition name="slide-fade" mode="out-in">
-            <component
-                :is="slides[currentSlide].component"
-                v-bind="slides[currentSlide].props"
-                :key="slides[currentSlide].id"
-            >
-                <template v-for="(content, slotName) in slides[currentSlide].slotContent" :slot="slotName" v-html="content" />
-            </component>
+            <router-view />
         </transition>
     </div>
     <Modal v-model:show="showOverlay" :show-sidebar="false">
@@ -99,13 +119,15 @@ function handleShowOveralay() {
             <About />
         </template>
     </Modal>
+  </div>
 </template>
 <style scoped>
 .slides-wrapper {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .slide-fade-enter-active, .slide-fade-leave-active {

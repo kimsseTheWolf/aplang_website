@@ -61,6 +61,6 @@ onMounted(() => {
     position: fixed; /* Changed to fixed to stay in the same position */
     top: 10px;
     left: 10px;
-    z-index: 1000; /* Ensures it stays on top */
+    z-index: 5000; /* Ensures it stays on top */
 }
 </style>
