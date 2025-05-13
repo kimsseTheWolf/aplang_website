@@ -72,14 +72,17 @@ function handleOnClose() {
     </OverlayBox>
 </template>
 <style scoped>
+/* Adjust scroll behavior to eliminate the scroll bar for the overall container */
 .modal-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    height: fit-content;
+    max-height: 90vh; /* Set maximum height for the modal */
+    overflow: hidden; /* Disable scroll bar for the overall container */
 }
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -90,7 +93,7 @@ function handleOnClose() {
     border-bottom-left-radius: v-bind(adjustableCornerRadisu);
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
-    overflow-y: auto;
+    overflow-y: auto; /* Enable scroll bar only for content */
     background-color: rgb(55, 55, 55);
     color: white;
 }
