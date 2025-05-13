@@ -20,10 +20,10 @@
   <ContentBlock>
     <template #content>
       <CardBlock :cards="[
-        { image: '/public/info.webp'},
-        { image: '/public/stress.png'},
-        { image: '/public/socialmedia.png'},
-        { image: '/public/interactions.png'},
+        { image: '/info.webp'},
+        { image: '/stress.png'},
+        { image: '/socialmedia.png'},
+        { image: '/interactions.png'},
       ]" >
         <template #card-0>
           <h2>Outdated Information</h2>

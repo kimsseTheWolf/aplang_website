@@ -147,7 +147,7 @@ function resolveComponent(content) {
 
         </template>
         <template #sidebar>
-            <img src="/public/source.png" height="300px" />
+            <img src="/source.png" height="300px" />
         </template>
     </Modal>
   </div>
