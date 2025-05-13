@@ -24,14 +24,14 @@ let timer = null;
 
 function handleNextPage() {
     console.log("next", currModel.value < props.length - 1)
-    if (currModel.value < props.length - 1) {
+    if (currModel.value < props.length) {
         currModel.value++;
     }
 }
 
 function handlePrevPage() {
     console.log("prev", currModel.value > 0)
-    if (currModel.value > 0) {
+    if (currModel.value > 1) {
         currModel.value--;
     }
 }
@@ -82,7 +82,7 @@ onMounted(() => {
                 <img src="@/components/icons/left-btn.svg" />
             </template>
         </RoundButton>
-        <PositionDot v-for="index in props.length" :key="index" :index="index - 1" :currentPage="currentPage"/>
+        <PositionDot v-for="index in props.length" :key="index" :index="index" :currentPage="currentPage"/>
         <RoundButton @click="handleNextPage" style="margin-left: 10px;">
             <template #icon>
                 <img src="@/components/icons/right-btn.svg" />

@@ -25,7 +25,7 @@ const props = defineProps({
     },
     height: {
         type: String,
-        default: "450px",
+        default: "100%",
     },
 });
 
@@ -54,7 +54,9 @@ function handleOnClose() {
         <template #content>
             <div class="modal-container">
                 <div class="sidebar-container" v-if="showSidebar">
-                    <slot name="sidebar" />
+                    <slot name="sidebar">
+                        <!-- Default content for the sidebar slot -->
+                    </slot>
                 </div>
                 <div class="main-container">
                     <slot name="content" />
@@ -70,14 +72,17 @@ function handleOnClose() {
     </OverlayBox>
 </template>
 <style scoped>
+/* Adjust scroll behavior to eliminate the scroll bar for the overall container */
 .modal-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    height: fit-content;
+    max-height: 90vh; /* Set maximum height for the modal */
+    overflow: hidden; /* Disable scroll bar for the overall container */
 }
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -88,23 +93,32 @@ function handleOnClose() {
     border-bottom-left-radius: v-bind(adjustableCornerRadisu);
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
-    overflow-y: auto;
+    overflow-y: auto; /* Enable scroll bar only for content */
     background-color: rgb(55, 55, 55);
     color: white;
 }
+/* Ensure images in the sidebar occupy the maximum width and disable overflow */
 .sidebar-container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    justify-content: center; /* Center contents vertically */
+    align-items: center; /* Center contents horizontally */
+    padding: 17px;
     width: v-bind(sidebarWidth);
     height: v-bind(height);
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    overflow-y: auto;
+    overflow: hidden; /* Disable any overflow */
     background-color: rgb(65, 65, 65);
     color: white;
+}
+
+.sidebar-container img {
+    width: 100%; /* Set image width to the maximum width of the sidebar */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within the container */
 }
 .close-btn {
     position: absolute;
