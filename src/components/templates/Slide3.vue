@@ -2,6 +2,7 @@
   <PageHeader title="Types of Drugs and Their Effects" backgroundColor="#e8f5e9" />
   <MultiContentBlock leftType="text" rightType="text">
     <template #left>
+      <img src="/md-contrast.svg"/>
       <h2>What are the different types of drugs?</h2>
       <p>
         Here are the common types of drugs that teens are commonly using or accidentally exposed to:
@@ -13,16 +14,16 @@
         { image: '/6.jpg'},
       ]" >
         <template #card-0>
-          <strong>Marijuana (Cannabis):</strong> Alters brain function, impairing memory, learning, and coordination. Frequent use can lead to cognitive deficits and mental health issues.
+          <strong>Marijuana (Cannabis):</strong> Worsening brain function, damaging memory, learning, and coordination. Frequent use can lead to cognitive problems and mental health issues.
         </template>
         <template #card-1>
-          <strong>Nicotine (E-cigarettes/Vaping):</strong> Highly addictive, harms brain development, and can cause lung inflammation and reduced respiratory health.
+          <strong>Nicotine (E-cigarettes/Vaping):</strong> Frequent use can lead to cognitive problems and mental health issues. Highly addictive, harms brain development, and can cause lung inflammation and worsening respiration.
         </template>
         <template #card-2>
-          <strong>Prescription Drugs:</strong> Misuse can lead to addiction, heart problems, and even fatal overdoses, especially with opioids like fentanyl.
+          <strong>Prescription Drugs:</strong> Improper use can lead to addiction, heart problems, and even fatal overdoses, especially for opioids like fentanyl.
         </template>
         <template #card-3>
-          <strong>Synthetic and Illicit Street Drugs:</strong> Unpredictable potency and toxic additives increase the risk of poisoning, overdose, and long-term damage.
+          <strong>Synthetic and Illicit Street Drugs:</strong> Unpredictable toxic components inside the drugs increase the risk of poisoning, overdose, and long-term damage.
         </template>
       </CardBlock>
     </template>
@@ -31,8 +32,12 @@
         <img src="/research.png" />
       </div>
       <div>
-        Part of the problem is that many substances are disguised or marketed in youth-friendly ways, making it hard for adults (and even teens themselves) to recognize the danger. For example, vaping devices can look identical to everyday objects. Some vapes are designed as pens, USB flash drives, or even highlighters that blend into a student’s pencil case. The vapor often smells like candy or fruit, so it doesn’t resemble the odor of tobacco that would normally tip off teachers or parents. This clever camouflage means a teen could be vaping in their bedroom or even in class without being detected, as long as they hide the device in plain sight.
+        Part of the problem is that many substances are disguised or marketed in youth-friendly ways, making it hard for adults (and even teens themselves) to recognize the danger. For example, vaping devices can look identical to everyday objects. Some vapes are designed as pens, USB flash drives, or even highlighters that blend into a student’s pencil case. The vapor often smells like candy or fruit, so it will be easier for teenagers to hide their vapor from teachers and parents. 
+        This gives them the chance to vape in the bedroom or at school without being discovered, as long as they hide the device in plain sight. Also, sometimes the fruit or candy flavors of vaping products contain drugs or other potentially dangerous substances, which will severely damage teenagers' health.
       </div>
+      <p>
+        Also, sometimes the fruit or candy flavors of vaping products contains drugs or other potentially dangerous substances, which will hugly damage teenagers' health.
+      </p>
     </template>
   </MultiContentBlock>
 
@@ -40,14 +45,18 @@
   <ContentBlock>
     <template #content>
       <CardBlock :cards="[
-        { image: '1.png', text: 'A set of confiscated vape devices that were cleverly designed to look like highlighter pens. Disguised vapes like these allow students to inhale nicotine (or THC) in secret, as they resemble ordinary school supplies. Unsuspecting parents or teachers might not realize that the innocent-looking highlighter on a desk is actually an e-cigarette. Such stealth vaping products exploit teens’ desire to avoid detection, hooking them on nicotine while staying under authority figures’ radar.' },
-        { image: '/2.png', text: 'So-called “Rainbow fentanyl” pills seized by the DEA. These brightly colored tablets (stamped with an “M” and “30” to resemble prescription oxycodone) look a bit like candy or children’s chewable vitamins, but are actually loaded with fentanyl. Drug cartels began mass-producing rainbow fentanyl in 2022 as a ploy to attract teens and young adults. The variety of pastel colors is not just for show – it’s a deliberate strategy to make the pills seem less scary and more fun. To an untrained eye, a bag of rainbow fentanyl could be mistaken for a bag of sweets. This is extremely dangerous because it lowers the psychological barriers to trying a pill. A teen might think, “It looks harmless,” when in reality any one of those pills could be lethal.' }
+        { image: '1.png'},
+        { image: '/2.png'}
       ]">
         <template #card-0>
-          A set of confiscated vape devices that were cleverly designed to look like highlighter pens. Disguised vapes like these allow students to inhale nicotine (or THC) in secret, as they resemble ordinary school supplies. Unsuspecting parents or teachers might not realize that the innocent-looking highlighter on a desk is actually an e-cigarette. Such stealth vaping products exploit teens’ desire to avoid detection, hooking them on nicotine while staying under authority figures’ radar.
+          Vaping devices that are designed and produced like a highlighter. 
+          E-cigarettes and vaping devices like this will easily mislead students into consuming dangerous and toxic substances. 
+          Also, by designing like school supplies, it will be easy for students to bring them to school without letting teachers, parents, and other students know,
+          which will cause teachers and parents to constantly ignore the issues of vaping and worsen the potential drug consumption from those devices.
         </template>
         <template #card-1>
-          So-called “Rainbow fentanyl” pills seized by the DEA. These brightly colored tablets (stamped with an “M” and “30” to resemble prescription oxycodone) look a bit like candy or children’s chewable vitamins, but are actually loaded with fentanyl. Drug cartels began mass-producing rainbow fentanyl in 2022 as a ploy to attract teens and young adults. The variety of pastel colors is not just for show – it’s a deliberate strategy to make the pills seem less scary and more fun. To an untrained eye, a bag of rainbow fentanyl could be mistaken for a bag of sweets. This is extremely dangerous because it lowers the psychological barriers to trying a pill. A teen might think, “It looks harmless,” when in reality any one of those pills could be lethal.
+          So-called “Rainbow fentanyl” pills were seized by the DEA. With the bright and "cute" colors, it will be very easy for children and teenagers to mistakenly think that those pills are candies, and hugely increase the potential of accidentally consuming them.
+          This is a very dangerous situation because sometimes those pills will have strong effects on the body, causing the teenagers to be addicted to them and causing health problems.
         </template>
       </CardBlock>
     </template>
