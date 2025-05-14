@@ -23,22 +23,22 @@
           </template>
           <template #expanded-content>
             <p>
-              <h3>💡How should I prevent?</h3>
-              <p>Use the following strategies for prevention:</p>
-              <ul>
-                <li>Find a healthy way to relieve your stresses: why not listen to music, exercise, play some video games, etc?</li>
-                <li>Don't trust every information on social media, most of the time when reading them without distinguishing, they will mislead and create biases and potentially be dangerous for you.</li>
-                <li>Join clubs, interest groups, or sports teams that build connections with others and also boost your confidence</li>
-                <li>Although it sounds easy and not useful, keep practicing how to say "no" to others, including their gifts, drinks, or food.</li>
-              </ul>
-              <h3>🚨This has already happened! What should I do?</h3>
-              <ul>
-                <li>Don’t hide it—reach out to a school counselor, trusted adult, or helpline.</li>
-                <li>Talk to a friend you trust who can support you without judgment.</li>
-                <li>Set a small goal (like cutting the amount of consumption) and work from there.</li>
-                <li>Learn about your options—usually, schools have support groups for students, and sometimes there are organizations in the community you can reach out to for help.</li>
-              </ul>
-            </p>
+		<h3>💡How should I prevent?</h3>
+		<p>Use the following strategies for prevention:</p>
+		<ul>
+			<li>Find a healthy way to relieve your stresses: why not listen to music, exercise, play some video games, etc?</li>
+			<li>Don't trust every information on social media, most of the time when reading them without distinguishing, they will mislead and create biases and potentially be dangerous for you.</li>
+			<li>Join clubs, interest groups, or sports teams that build connections with others and also boost your confidence</li>
+			<li>Although it sounds easy and not useful, keep practicing how to say "no" to others, including their gifts, drinks, or food.</li>
+		</ul>
+		<h3>🚨This has already happened! What should I do?</h3>
+		<ul>
+			<li>Don’t hide it—reach out to a school counselor, trusted adult, or helpline.</li>
+			<li>Talk to a friend you trust who can support you without judgment.</li>
+			<li>Set a small goal (like cutting the amount of consumption) and work from there.</li>
+			<li>Learn about your options—usually, schools have support groups for students, and sometimes there are organizations in the community you can reach out to for help.</li>
+		</ul>
+	    </p>
           </template>
         </ExpandableCard>
 
@@ -52,22 +52,22 @@
           </template>
           <template #expanded-content>
             <p>
-              <h3>💡How should I prevent my children from taking drugs?</h3>
-              <p>Use the following strategies for prevention:</p>
-              <ul>
-                <li>Regularly check in with your children! Ask them about their life at school, and listen to them if there are any problems they want to solve.</li>
-                <li>Actively monitor your children's mental health. Is their behavior correct? Is their mood okay? Are they having any abnormal behavior, ideas, or expressions?</li>
-                <li>Learning and identifying different forms of drugs that exist in society, especially for drugs hidden in other products</li>
-                <li>Be a model to correctly relieve stress! Tell them and show them what are the correct ways to relief, and listen to them if they are under high stress conditions and facing stresses!</li>
-              </ul>
-              <h3>🚨This has already happened! What should I do?</h3>
-              <ul>
-                <li>Stay calm. <b>DO NOT</b> blame for your children. Otherwise it will shut down the communication between you and your children!</li>
-                <li>Ask them with care: What is going on? Why are your children doing it?</li>
-                <li>Collect information and contact professional help: Call teachers at school for more information at school, call hospitals or organizations that help with drug prevention, etc.</li>
-                <li>Always create a safe environment for them to recover, and be supportive, letting them know you are always there for help!</li>
-              </ul>
-            </p>
+		<h3>💡How should I prevent my children from taking drugs?</h3>
+		<p>Use the following strategies for prevention:</p>
+		<ul>
+			<li>Regularly check in with your children! Ask them about their life at school, and listen to them if there are any problems they want to solve.</li>
+			<li>Actively monitor your children's mental health. Is their behavior correct? Is their mood okay? Are they having any abnormal behavior, ideas, or expressions?</li>
+			<li>Learning and identifying different forms of drugs that exist in society, especially for drugs hidden in other products</li>
+			<li>Be a model to correctly relieve stress! Tell them and show them what are the correct ways to relief, and listen to them if they are under high stress conditions and facing stresses!</li>
+		</ul>
+		<h3>🚨This has already happened! What should I do?</h3>
+		<ul>
+			<li>Stay calm. <b>DO NOT</b> blame for your children. Otherwise it will shut down the communication between you and your children!</li>
+			<li>Ask them with care: What is going on? Why are your children doing it?</li>
+			<li>Collect information and contact professional help: Call teachers at school for more information at school, call hospitals or organizations that help with drug prevention, etc.</li>
+			<li>Always create a safe environment for them to recover, and be supportive, letting them know you are always there for help!</li>
+		</ul>
+	    </p>
           </template>
         </ExpandableCard>
 
@@ -81,22 +81,22 @@
           </template>
           <template #expanded-content>
             <p>
-              <h3>💡How should I prevent my students from potential drug use?</h3>
-              <p>Use the following strategies for prevention:</p>
-              <ul>
-                <li>Build trust with your students. Let them be willing to communicate with you - either academic or daily life communication</li>
-                <li>Encourage students to join school or class activities, let them build connections with other teachers and students at school.</li>
-                <li>Be supportive. When your students are low or under stress, ask them if they need help, and provide any necessary support to them. This should be done privately, and each student should have different approaches and suggestions based on their situations.</li>
-                <li>Teach your students how to distinguish drugs in daily life, where to ask for help, and how drugs will affect their mental and physical health.</li>
-              </ul>
-              <h3>🚨This has already happened! What should I do?</h3>
-              <ul>
-                <li>Speak to them privately, with concern, and do not blame: "Hey, I've noticed some changes. I care and I'm here."</li>
-                <li>Contact parents and school administrators or other teachers who would help with this situation immediately.</li>
-                <li>Follow up. Even just checking in can make a student feel seen.</li>
-                <li>Keep things between you and the student. This should not let others be known otherwise it will create more pressures to the students and letting them become more confused during the process.</li>
-              </ul>
-            </p>
+		<h3>💡How should I prevent my students from potential drug use?</h3>
+		<p>Use the following strategies for prevention:</p>
+		<ul>
+			<li>Build trust with your students. Let them be willing to communicate with you - either academic or daily life communication</li>
+			<li>Encourage students to join school or class activities, let them build connections with other teachers and students at school.</li>
+			<li>Be supportive. When your students are low or under stress, ask them if they need help, and provide any necessary support to them. This should be done privately, and each student should have different approaches and suggestions based on their situations.</li>
+			<li>Teach your students how to distinguish drugs in daily life, where to ask for help, and how drugs will affect their mental and physical health.</li>
+		</ul>
+		<h3>🚨This has already happened! What should I do?</h3>
+		<ul>
+			<li>Speak to them privately, with concern, and do not blame: "Hey, I've noticed some changes. I care and I'm here."</li>
+			<li>Contact parents and school administrators or other teachers who would help with this situation immediately.</li>
+			<li>Follow up. Even just checking in can make a student feel seen.</li>
+			<li>Keep things between you and the student. This should not let others be known otherwise it will create more pressures to the students and letting them become more confused during the process.</li>
+		</ul>
+	    </p>
           </template>
         </ExpandableCard>
 
@@ -110,22 +110,22 @@
           </template>
           <template #expanded-content>
             <p>
-              <h3>💡How should I prevent this in school?</h3>
-              <p>Use the following strategies for prevention:</p>
-              <ul>
-                <li>Train your staff! Teach them how to recognize students' emotions and how they should properly provide help to students.</li>
-                <li>Provide students a place to relieve their stress, either by creating a stress relief room or making adjustments to the daily workload or schedule.</li>
-                <li>Invest in a mental health counselor and related resources. Increase the advertising of services related to mental health to students.</li>
-                <li>Create an environment that lets the students feel that they are safe.</li>
-              </ul>
-              <h3>🚨This has already happened! What should I do?</h3>
-              <ul>
-                <li>Help them connect to other available supportive services!</li>
-                <li>Keep the communication with the family. Always keeping up with the situation of the student.</li>
-                <li>Make sure to protect your student's privacy! Keep this private and between the teachers and the family.</li>
-                <li>Make adjustments to current policies and strategies on prevention in school, and monitor students' emotions and moods more closely for further prevention!</li>
-              </ul>
-            </p>
+		<h3>💡How should I prevent this in school?</h3>
+		<p>Use the following strategies for prevention:</p>
+		<ul>
+			<li>Train your staff! Teach them how to recognize students' emotions and how they should properly provide help to students.</li>
+			<li>Provide students a place to relieve their stress, either by creating a stress relief room or making adjustments to the daily workload or schedule.</li>
+			<li>Invest in a mental health counselor and related resources. Increase the advertising of services related to mental health to students.</li>
+			<li>Create an environment that lets the students feel that they are safe.</li>
+		</ul>
+		<h3>🚨This has already happened! What should I do?</h3>
+		<ul>
+			<li>Help them connect to other available supportive services!</li>
+			<li>Keep the communication with the family. Always keeping up with the situation of the student.</li>
+			<li>Make sure to protect your student's privacy! Keep this private and between the teachers and the family.</li>
+			<li>Make adjustments to current policies and strategies on prevention in school, and monitor students' emotions and moods more closely for further prevention!</li>
+		</ul>
+	    </p>
           </template>
         </ExpandableCard>
       </div>
